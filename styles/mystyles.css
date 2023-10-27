@@ -1,0 +1,14 @@
+/* Global */
+
+a {
+    text-decoration: none;
+}
+
+/* Inputs */
+
+
+.error {
+    border: 1px solid red;
+    background-color: #FFDDDD; 
+    color: red;
+}
