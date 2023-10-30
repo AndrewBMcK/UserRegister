@@ -3,25 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/mystyles.css">
+    <title>Users</title>
 </head>
+
+<header>
+    <div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="register.html">Register</a>
+            <a href="users.html">Users</a>
+        </nav>
+    </div>
+</header>
 <body>
     <h1>Registered Users</h1>
-    <table class="table">
+    <table id="usersTable">
         <thead>
-            <th>Email</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Age</th>
-            <th>Grade 101</th>
-            <th>Grade 102</th>
-            <th>Grade 103</th>
+            <tr>
+                <th>Email</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+                <th>Grade 101</th>
+                <th>Grade 102</th>
+                <th>Grade 103</th>
+            </tr>
         </thead>
-        <tbody id="usersTable"></tbody>
+        <tbody>
+
+        </tbody>
     </table>
+
+    <button id="clearAllButton">Clear All</button>
     <!-- Display users in a table -->
-    <script src="/scripts/jQuery3-7.js"></script>
+
+    <script src="./scripts/jQuery3-7.js"></script>
     <script src="./scripts/userlist.js"></script>
-    <script src="scripts/storeManager.js"></script>
+    <script src="./scripts/storeManager.js"></script>
+    <script src="./scripts/app.js"></script>
 </body>
 </html>
