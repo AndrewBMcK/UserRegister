@@ -32,54 +32,22 @@ function clearTable() {
     tableBody.innerHTML = "";
 }
 
-// Add an event listener to the "Clear All" button
-document.getElementById("clearAllButton").addEventListener("click", function() {
-    // Clear the table content visually
-    clearTable();
-    
-    // Clear all data in localStorage
-    localStorage.clear();
-});
-
-// Call the displayUsers function to display registered users
-document.addEventListener("DOMContentLoaded", function() {
-    displayUsers();
-});
-
-function readUsers() {
-    return[
-        {
-            inputEmail: "",
-            inputFirstname: "",
-            inputLastname: "",
-            inputAge: "",
-            inputGrade101: "",
-            inputGrade102: "",
-            inputGrade103: "",
-        }
-    ];
-}
-
-
-// Function to clear the table visually
-function clearTable() {
-    let tableBody = document.getElementById("usersTable").getElementsByTagName("tbody")[0];
-    tableBody.innerHTML = "";
-}
-
-// Add an event listener to the "Clear All" button
-document.getElementById("clearAllButton").addEventListener("click", function() {
-    // Clear the table content visually
-    clearTable();
-
-    // Clear all data in localStorage
-    localStorage.clear();
-});
-
 // Function to initialize and display users
 function init() {
-    displayUsers(); // This function also handles the reading of users from storage
+    // Check if the current page is users.html before adding the event listener
+    if (window.location.pathname.endsWith("users.html")) {
+        // Add an event listener to the "Clear All" button
+        document.getElementById("clearAllButton").addEventListener("click", function() {
+            // Clear the table content visually
+            clearTable();
+
+            // Clear all data in localStorage
+            localStorage.clear();
+        });
+    }
+
+    displayUsers(); 
 }
 
-// Use the "DOMContentLoaded" event to ensure the DOM is fully loaded
+// Ensure the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", init);

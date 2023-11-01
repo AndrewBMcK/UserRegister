@@ -105,9 +105,11 @@ function clearInput() {
 }
 
 function init() {
+    displayUsers();
     //hook events
     $("#btnRegister").on("click",register);
 }
 
 window.onload = init;
+
 

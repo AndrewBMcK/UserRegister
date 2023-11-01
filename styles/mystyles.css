@@ -5,15 +5,46 @@ a {
     color: black;
 }
 
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Header */
 nav {
     display: flex;
     justify-content: space-evenly;
-    justify-items: center;
 }
 
-* {
-    padding: 0%;
-    margin: 0%;
+header {
+    background-color: rgb(143, 119, 119);
+    border: 1px solid #000;
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+header a {
+    color: white;
+}
+
+/* Main */
+
+body {
+    margin: 20px;
+}
+
+img {
+    width: 900px;
+    height: auto;
+}
+
+.center-container {
+    text-align: center;
+}
+
+.center-container img {
+    display: inline-block;
 }
 
 /* Inputs */
